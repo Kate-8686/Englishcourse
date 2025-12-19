@@ -16,10 +16,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-          cache: 'npm'
+          # ⬇️ УДАЛИТЕ эту строку (cache: 'npm')
       
       - name: Install dependencies
-        run: npm ci
+        # ⬇️ ИЗМЕНИТЕ эту строку:
+        run: npm install  # было: npm ci
       
       - name: Build
         run: npm run build
